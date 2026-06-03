@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 34px;
+}
+
+.header p {
+  margin: 0 0 20px;
+  color: #475569;
+}
+
+.controls {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+textarea {
+  width: 100%;
+  min-height: 84px;
+  resize: vertical;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+  outline: none;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+button {
+  border: none;
+  background: #0f172a;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.slider-row {
+  margin-top: 16px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.step-info {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: #334155;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+  overflow: hidden;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+}
+
+.tree-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: auto;
+}
+
+.empty-tree {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  color: #64748b;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+}
+
+.legend {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-top: 16px;
+  color: #334155;
+  flex-wrap: wrap;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  margin-right: 8px;
+}
+
+.dot.blue { background: #2563eb; }
+.dot.red { background: #ef4444; }
+.dot.black { background: #111827; }
+
+.error {
+  margin-top: 12px;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
